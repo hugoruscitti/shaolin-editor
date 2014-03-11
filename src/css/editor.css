@@ -5,6 +5,7 @@ html {
 html, body {
     overflow: hidden;
     margin: 5px;
+    background-color: rgb(231, 231, 231);
 }
 
 canvas {
@@ -91,6 +92,9 @@ ul.texturas li:hover {
     z-index: 5000;
 
     -webkit-transition: right 0.25s ease-in-out;
+
+    border-radius: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 .panel-invisible {

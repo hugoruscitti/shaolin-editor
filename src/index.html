@@ -6,10 +6,11 @@
 
         <script type="text/javascript" src="bower_components/raphael/raphael-min.js"></script>
         <script type="text/javascript" src="bower_components/raphael.free_transform/raphael.free_transform.js"></script>
+        <script type="text/javascript" src='bower_components/jquery/dist/jquery.min.js'></script>
         <script type="text/javascript" src='bower_components/angular/angular.min.js'></script>
         <script type="text/javascript" src='bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js'></script>
 
-        <link rel="stylesheet" type="text/css" href="css/topcoat-desktop-light.css">
+        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/editor.css">
     </head>
 
@@ -31,21 +32,9 @@
 
         <div ng-controller='BotonesCtrl' class='contenedor-editor'>
 
-            <div class="topcoat-button-bar span">
-
-                <div class="topcoat-button-bar__item">
                     <button ng-click='abrir_archivo()' class="topcoat-button-bar__button">Abrir archivo</button>
-                </div>
-
-                <div class="topcoat-button-bar__item">
                     <button ng-click='guardar_archivo()' class="topcoat-button-bar__button">Guardar</button>
-                </div>
-
-                <div class="topcoat-button-bar__item">
                     <button ng-click='guardar_archivo()' class="topcoat-button-bar__button">Guardar Como ...</button>
-                </div>
-
-            </div>
 
 
             <div class='contenedor'>
