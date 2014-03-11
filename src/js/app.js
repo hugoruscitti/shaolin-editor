@@ -41,6 +41,7 @@ function crear_objeto(ruta_imagen) {
 var fs = require('fs');
 
 app.controller("AppCtrl", function($scope) {
+    $scope.canvas_expandido = false;
     $scope.panel_invisible = false;
     $scope.cargando = true;
     $scope.texturas = [];
@@ -54,6 +55,7 @@ app.controller("AppCtrl", function($scope) {
 
     $scope.alternar_panel = function() {
         $scope.panel_invisible = !$scope.panel_invisible;
+        $scope.canvas_expandido = $scope.panel_invisible;
     }
 
     $scope.seleccionar_textura = function(indice) {

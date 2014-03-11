@@ -21,6 +21,12 @@ canvas {
     right: 377px;
     overflow: auto;
     margin-top: 10px;
+
+    -webkit-transition: right 0.25s ease-in-out;
+}
+
+.contenedor-expandido {
+    right: 10px;
 }
 
 div.selector-fondo {

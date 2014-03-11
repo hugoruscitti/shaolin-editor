@@ -4,12 +4,6 @@
         <title>Shaolin Editor</title>
         <meta charset="utf-8">
 
-        <script type="text/javascript" src="bower_components/raphael/raphael-min.js"></script>
-        <script type="text/javascript" src="bower_components/raphael.free_transform/raphael.free_transform.js"></script>
-        <script type="text/javascript" src='bower_components/jquery/dist/jquery.min.js'></script>
-        <script type="text/javascript" src='bower_components/angular/angular.min.js'></script>
-        <script type="text/javascript" src='bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js'></script>
-
         <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/editor.css">
     </head>
@@ -17,7 +11,7 @@
     <body ng-controller='AppCtrl'>
 
         <div class='panel' ng-class="{'panel-invisible': panel_invisible == true}">
-            <div ng-click='alternar_panel()' class='panel-ocultador'>→</div>
+            <div ng-click='alternar_panel()' class='panel-ocultador btn btn-sm btn-info'></div>
 
             <div>
                 <p>Texturas
@@ -32,12 +26,11 @@
 
         <div ng-controller='BotonesCtrl' class='contenedor-editor'>
 
-                    <button ng-click='abrir_archivo()' class="topcoat-button-bar__button">Abrir archivo</button>
-                    <button ng-click='guardar_archivo()' class="topcoat-button-bar__button">Guardar</button>
-                    <button ng-click='guardar_archivo()' class="topcoat-button-bar__button">Guardar Como ...</button>
+            <button ng-click='abrir_archivo()'   class="btn btn-sm btn-success">Abrir archivo</button>
+            <button ng-click='guardar_archivo()' class="btn btn-sm btn-success">Guardar</button>
+            <button ng-click='guardar_archivo()' class="btn btn-sm btn-success">Guardar Como ...</button>
 
-
-            <div class='contenedor'>
+            <div class='contenedor' ng-class="{'contenedor-expandido': canvas_expandido == true}">
 
                 <div id="canvas_container"></div>
 
@@ -50,8 +43,11 @@
 
     </body>
 
-
-
-    <script src='js/app.js'></script>
+    <script type="text/javascript" src="bower_components/raphael/raphael-min.js"></script>
+    <script type="text/javascript" src="bower_components/raphael.free_transform/raphael.free_transform.js"></script>
+    <script type="text/javascript" src='bower_components/jquery/dist/jquery.min.js'></script>
+    <script type="text/javascript" src='bower_components/angular/angular.min.js'></script>
+    <script type="text/javascript" src='bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js'></script>
+    <script type="text/javascript" src='js/app.js'></script>
 
 </html>
