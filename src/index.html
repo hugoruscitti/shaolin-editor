@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang='es' ng-app='app'>
+<head>
+
+    <meta name="apple-touch-fullscreen" content="yes" />
+
+    <title></title>
+
+    <script type="text/javascript" src="vendor/easeljs-0.6.1.min.js"></script>
+    <script type="text/javascript" src="vendor/PxLoader.js"></script>
+    <script type="text/javascript" src="vendor/PxLoaderImage.js"></script>
+
+    <script type="text/javascript" src="./editor.js"></script>
+  
+    <link rel="stylesheet" type="text/css" href="css/topcoat-desktop-light.css">
+    <link rel="stylesheet" type="text/css" href="css/editor.css">
+
+</head>
+<body onload="init_editor();" ng-controller='AppCtrl'>
+  
+	
+  
+<div class='panel' ng-class="{'panel-invisible': panel_invisible == true}">
+	<div ng-click='alternar_panel()' class='panel-ocultador'>.P</div>
+	
+	
+	<div>
+		<p>Texturas
+
+		<ul class='texturas'>
+			<li onclick='seleccionar_textura(1)'><img src='data/aceituna.png'/></li>
+			<li onclick='seleccionar_textura(2)'><img src='data/caja.png'/></li>
+		</ul>
+	</div>
+	
+</div>
+  
+  
+<div ng-controller='BotonesCtrl' class='contenedor-editor'>
+  
+  <div class="topcoat-button-bar span">
+    
+    <itembutton ng-click='abrir_archivo()'>Abrir</itembutton>
+    
+   <div class="topcoat-button-bar__item">
+     <button ng-click='abrir_archivo()' class="topcoat-button-bar__button">Abrir archivo</button>
+   </div>
+    
+   <div class="topcoat-button-bar__item">
+     <button ng-click='guardar_archivo()' class="topcoat-button-bar__button">Guardar</button>
+   </div>
+    
+   <div class="topcoat-button-bar__item">
+     <button ng-click='guardar_archivo()' class="topcoat-button-bar__button">Guardar Como ...</button>
+   </div>
+  </div>
+  
+  
+    <canvas id="canvas_editor" width=512 height=384></canvas>
+  
+  <input style="display:none;" id="openDialog" type="file" />
+  <input style="display:none;" id="saveDialog" type="file" nwsaveas />
+  
+</div>
+  
+</body>
+
+<script src='js/live.js'></script>
+<script src='js/angular.js'></script>
+<script src='js/app.js'></script>
+  
+<script>
+  var jsonfile = require('jsonfile');
+  var datos = {};
+  
+  jsonfile.readFile('./datos.json', function(err, data) {
+
+    if (err) {
+      datos = {};
+      console.log("se cargaron los datos vacios, el archivo no existe...");
+    }
+
+    datos = data;
+  });
+</script>
+
+</html>

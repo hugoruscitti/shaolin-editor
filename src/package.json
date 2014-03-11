@@ -1,0 +1,12 @@
+{
+	"name": "shaolin editor",
+	"main": "index.html",
+	"window": {
+ 		"toolbar": true,
+ 		"min_width": 900,
+ 		"min_height": 445,
+ 		"width": 900,
+ 		"height": 445,
+ 		"position": "center"
+ 	}
+}
