@@ -3,14 +3,23 @@ html {
 }
 
 html, body {
-  overflow: hidden;
-  margin: 5px;
+    overflow: hidden;
+    margin: 5px;
 }
 
 canvas {
     border: 1px solid gray;
     background-color: gray;
-  margin-top: 10px;
+    margin-top: 10px;
+}
+
+.contenedor {
+    border: 1px solid rgb(197, 197, 197);
+    position: absolute;
+    left: 10px;
+    right: 377px;
+    overflow: auto;
+    margin-top: 10px;
 }
 
 div.selector-fondo {
@@ -72,27 +81,31 @@ ul.texturas li:hover {
 
 
 .panel {
-	border: 1px solid black;
-	position: absolute;
-	width: 350px;
-	top:0;
-	right: 0px;
-	bottom: 0;
-	background-color: #f0f0f0;
-	
-	-webkit-transition: right 0.25s ease-in-out;
+    position: absolute;
+    width: 350px;
+    top:0;
+    right: 0px;
+    bottom: 0;
+    background-color: #FFFFFF;
+    padding-left: 15px;
+    z-index: 5000;
+
+    -webkit-transition: right 0.25s ease-in-out;
 }
 
 .panel-invisible {
-	right: -350px;
+    right: -350px;
 }
 
 .panel-ocultador {
-	position: absolute;
-	left: -23px;
-	top: 0;
-	width: 20px;
-	height: 20px;
-	background-color: white;
-	cursor: pointer;
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.panel-ocultador:hover {
+    text-shadow: aqua 0px 0px 7px;
 }
